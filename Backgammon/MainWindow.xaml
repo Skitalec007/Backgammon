@@ -1,0 +1,42 @@
+﻿<Window x:Class="Backgammon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Backgammon"
+        mc:Ignorable="d"
+        Title="Скандинавские нарды" Height="582" Width="750" 
+        ResizeMode="NoResize">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <!--Заголовок с изображением-->
+        <Image Source="C:\Users\25mir\source\repos\Backgammon\Backgammon\starterHeader.jpg" 
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Stretch="UniformToFill"/>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Скандинавские нарды" TextAlignment="Center"
+                   Margin="120,20,0,0" FontSize="25" Foreground="Red" FontWeight="DemiBold" 
+                   TextDecorations="Underline" />
+        <!--Новостное поле-->
+        <TextBox x:Name="newsFild" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  IsReadOnly="True" Foreground="Blue"
+        FontSize="15" />
+        
+        <!--Прогресс загрузки обновления-->
+        <ProgressBar Grid.Row="2" Grid.Column="0" Value="0"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" TextAlignment="Center" Foreground="Red" Margin="5"
+                   FontSize="20" FontWeight="Bold" Text="Загрузка обновлений невозможна" />
+        
+        <!--Кнопка запуска игры-->
+        <Button Grid.Row="2" Grid.Column="1" FontSize="20" Foreground="Blue" ToolTip="Временно не доступно" 
+                Content="Играть"/>
+    </Grid>
+</Window>
